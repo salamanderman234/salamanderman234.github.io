@@ -349,7 +349,7 @@ function renderPersonalIdentity() {
   const greetingEl = document.getElementById("heroGreeting");
   if (greetingEl) greetingEl.innerHTML = profile.greetingHtml;
   setText("heroSummary", profile.summary);
-  setText("footerCopy", `© ${new Date().getFullYear()} ${profile.name.toUpperCase()} — PERSONAL PORTFOLIO`);
+  setText("footerCopy", `© ${new Date().getFullYear()} ${(profile.shortName || profile.name).toUpperCase()}`);
 
   const headlineEl = document.getElementById("heroHeadline");
   if (headlineEl) headlineEl.innerHTML = profile.headlineHtml;
